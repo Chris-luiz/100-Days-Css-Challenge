@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;400&display=swap');
+
+*{
+      font-family: "Cairo";
+}
+
+body{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow: hidden;
+}
+
+#section{
+      height: 100vh;
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+}
+
+
+article:nth-of-type(1),    
+article:nth-of-type(2),      
+article:nth-of-type(3),     
+article:nth-of-type(4),   
+article:nth-of-type(5){
+      width: 100%;
+      height: calc(100vh - 62px);
+      scroll-snap-align: start;
+}
+
+article:nth-of-type(1){background-color: tomato;}
+article:nth-of-type(2){background-color: cornflowerblue;}
+article:nth-of-type(3){background-color: teal;}
+article:nth-of-type(4){background-color: orange;}
+article:nth-of-type(5){background-color: palevioletred;}
+
+.article-title{
+      margin: 0;
+      text-align: center;
+      font-size: 7vh;
+      margin-bottom: 1vh;
+}
+
+/************************************  NAV-MENU ************************************/
+#nav-menu{
+      width: 100%;
+      background-color: rgb(24, 26, 31);
+}
+
+#nevegador{
+      display: flex;
+      justify-content: space-between;
+      position: sticky;
+}
+
+#list-container{
+      display: flex;
+}
+
+.nav-iten{
+      list-style: none;
+      margin-left: 1em;
+      
+}
+.nav-iten .nav-link{
+      color: white;
+      text-decoration: none;
+      font-size: 1em;
+}
+
+.nav-link:hover{
+      text-decoration: underline;
+}
+
+/***********************************  SEÇÃO SOBRE **********************************/
+
+#about{
+     display: grid;
+     grid-template-areas: 
+     "img info"
+     "img conhecimento"
+}
+
+.about-img{
+      grid-area: img;
+      background-color: white;
+      width: 250px;
+      height: 300px;
+      object-fit: cover;
+      border: 1px solid black;
+}
+
+.about-info{
+      grid-area: info;
+      border: 1px solid black;
+}
+
+/********************************  SEÇÃO DE PROJETOS ********************************/
+#projects{
+      display: grid;
+      gap: 5%;
+      grid-template-areas: "projeto1 projeto2 projeto3";
+}
+
+.projects{
+      width: 15vw;
+      height: 20vh;
+      background: white;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      transform-style: preserve-3d;
+      transition: 2s;
+}
+
+.project-card{
+      transform: rotateY(180deg);
+}
+
+.projects-front{
+      position: absolute;
+      display: grid;
+      grid-template-areas: "img" "sobre";      
+}
+.projects-back{
+      background-color: white;
+      width: 15vw;
+      height: 20vh;
+      position: absolute;
+      transition: all .2s;
+      transform: rotateY(180deg);
+}
+
+.projects-img{
+      grid-area: img;
+      width: 100%;
+}
+
+.projects-about{
+      margin: 0;
+      text-align: center;
+      grid-area: sobre;
+      font-size: 100%;
+}
+
+/********************************  SEÇÃO DE CONHECIMENTOS ********************************/
+#knowledges{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 5%;
+}
+
+.skill-card{
+      background-color: white;
+      border-radius: 15px 15px 0 0;
+}
+
+.skill-card-head{
+      background-color: rgb(140, 143, 146);
+      border-radius: 15px 15px 0 0;
+      width: 100%;
+      height: 100px;
+}
+
+
+/******************************  SEÇÃO DE EXPERIÊNCIA ******************************/
+#experience{
+      justify-content: center;
+      align-items: center;
+      display: grid;
+      grid-template-areas: "card1" "card2";
+      gap: 4%;
+}
+
+.experience-container{
+      width: 100%;
+      border: 2px solid white;
+      border-radius: 40px;
+      padding: 2%;
+      font-size: 25pt;
+}
+
+.experience-container:nth-of-type(1){grid-area: card1;}
+.experience-container:nth-of-type(2){grid-area: card2;}
+
+.experience-title{
+      margin: 0 0 2% 0;
+      font-size: 100%;
+      text-align: center;
+}
+
+.experience-job{
+      margin: 0;
+      font-size: 70%;
+      text-align: center;
+}
+
+.experience-text{
+      font-size: 50%;
+      text-align: center;
+}
+
+/********************************  SEÇÃO DE CONTATO ********************************/
+
+#contact{ 
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto, auto, auto;
+      gap: 5vh;
+      justify-content: center;
+}
+
+#contact > p:nth-of-type(1)::after, 
+#contact > p:nth-of-type(2)::after, 
+#contact > p:nth-of-type(3)::after{
+      content: '';
+      display: block;
+      width: 50%;
+      height: 3px;
+      background: #05527e;
+}
+
+/* #contact > p:nth-of-type(1)::after, #contact > p:nth-of-type(1){
+      float: left;
+}
+
+#contact > p:nth-of-type(2)::after, #contact > p:nth-of-type(2){
+      float: right;
+}
+
+#contact > p:nth-of-type(3)::after, #contact > p:nth-of-type(3){
+      float: left;
+} */
+
+/*************************************  FOOTER *************************************/
+#footer{
+      width: 100%;
+      background-color: rgb(56, 56, 56);
+}
+.container{
+      margin-left: 25%;
+      margin-right: 25%;
+}
+.grid-container{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-column-gap: 1em;
+}
+.footer-box{
+      color: #fff;
+}
+.footer-iten{
+      list-style: none;
+      margin-bottom: .80em;
+}
+.footer-link{
+      color: #fff;
+      text-decoration: none;
+}
+.footer-link:hover{
+      text-decoration: underline ;
+      cursor: alias;
+} 
+
+
+
+
+
+
+
+
+
+.art5{
+      position: relative;
+}
+
+
+
+
+.forma{
+      position: relative;
+}
+
+.seta{
+      position: absolute;
+      display: block;
+      width: 60%;
+      height: 2em;
+      background-color:rgb(241, 191, 50);
+}
+
+.seta-ponta{
+      position: absolute;
+      display: block;
+      width: 2em;
+      height: 2em;
+      background-color:rgb(241, 191, 50);
+      transform: rotate(45deg);
+      left: 59%;
+}
+
+
+.circle{
+      position: absolute;
+      background-color: orange;
+      border-radius: 100%
+}
+
+.circle:nth-of-type(1){
+      width: 35vh;
+      height: 35vh;
+      bottom: -20%;
+}
+.circle:nth-of-type(2){
+      background-color: cornflowerblue;
+      width: 31vh;
+      height: 31vh;
+      top: -15%;
+      left: 95%;
+}
+
+.circle:nth-of-type(3){
+      background-color: cornflowerblue;
+      width: 28vh;
+      height: 28vh;
+      top: -21%;
+      left: 85%;
+}
+
+.circle:nth-of-type(4){
+      width: 11vh;
+      height: 11vh;
+      bottom: -8%;
+      left: 85%;
+}
+
+
+.circle:nth-of-type(6){
+      background-color: cornflowerblue;
+      width: 14vh;
+      height: 14vh;
+      top: -10%;
+      left: 25%;
+}
+
+
+.line{
+      position: absolute;
+      width: 2vh;
+      height: calc(100vh - 62px);
+}
+
+.line1{
+      top: 0;
+      left: 14vh;
+      background-image: linear-gradient(cornflowerblue, orange 70%);
+}
+.line2{
+      background-image: linear-gradient(cornflowerblue, orange 70%) ;
+      left: 18vh;
+      top: 0;
+}
+.line3{
+      height: 45vh;
+      bottom: -10%;
+      left: 195vh;
+      background-color: orange;
+      transform: rotate(45deg);
+}
+.line4{
+      height: 45vh;
+      bottom: -10%;
+      left: 190vh;
+      background-color: orange;
+      transform: rotate(45deg);
+}
+

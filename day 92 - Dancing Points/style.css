@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 500px;
+    height: 500px;
+    background-color: #27ae60;
+    position: relative;
+    border-radius: 5px;
+}
+
+.point{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+}
+
+.point:nth-of-type(1){
+    animation: move1 5s linear infinite;
+}
+
+.point:nth-of-type(2){
+    animation: move2 5s linear infinite;
+}
+
+.point:nth-of-type(3){
+    animation: move3 5s linear infinite;
+}
+
+.point:nth-of-type(4){
+    animation: move4 5s linear infinite;
+}
+
+.point:nth-of-type(5){
+    animation: move5 5s linear infinite;
+}
+
+.point:nth-of-type(6){
+    animation: move6 5s linear infinite;
+}
+
+.point:nth-of-type(7){
+    animation: move7 5s linear infinite;
+}
+
+.point:nth-of-type(8){
+    animation: move8 5s linear infinite;
+}
+
+.point:nth-of-type(9){
+    animation: move1 10s linear infinite;
+}
+
+.point:nth-of-type(10){
+    animation: move2 10s linear infinite;
+}
+
+.point:nth-of-type(11){
+    animation: move3 10s linear infinite;
+}
+
+.point:nth-of-type(12){
+    animation: move4 10s linear infinite;
+}
+
+.point:nth-of-type(13){
+    animation: move5 10s linear infinite;
+}
+
+.point:nth-of-type(14){
+    animation: move6 10s linear infinite;
+}
+
+.point:nth-of-type(15){
+    animation: move7 10s linear infinite;
+}
+
+.point:nth-of-type(16){
+    animation: move8 10s linear infinite;
+}
+
+@keyframes move1{
+    0%, 100%{ transform: translate(0, 0);}
+    50%{transform: translate(500px, 250px);}
+}
+
+@keyframes move2{
+    0%, 100%{ transform: translate(0, 0);}
+    50%{transform: translate(250px, 500px);}
+}
+
+@keyframes move3{
+    0%, 100%{transform: translate(500px, 0);}
+    50%{transform: translate(0px, 250px);}
+}
+
+@keyframes move4{
+    0%, 100%{ transform: translate(500px, 0);}
+    50%{transform: translate(250px, 500px);}
+}
+
+@keyframes move5{
+    0%, 100%{ transform: translate(0, 500px);}
+    50%{transform: translate(500px, 250px);}
+}
+
+@keyframes move6{
+    0%, 100%{ transform: translate(0, 500px);}
+    50%{transform: translate(250px, 0);}
+}
+
+@keyframes move7{
+    0%, 100%{ transform: translate(500px, 500px);}
+    50%{transform: translate(250px, 0);}
+}
+
+@keyframes move8{
+    0%, 100%{ transform: translate(500px, 500px);}
+    50%{transform: translate(0, 250px);}
+}
+
+@keyframes move9{
+    0%, 100%{ transform: translate(0, 0);}
+    50%{transform: translate(500px, 250px);}
+}
+
+@keyframes move10{
+    0%, 100%{ transform: translate(0, 0);}
+    50%{transform: translate(500px, 250px);}
+}
+
+@keyframes move11{
+    0%, 100%{ transform: translate(0, 0);}
+    50%{transform: translate(500px, 250px);}
+}
+
+@keyframes move12{
+    0%, 100%{ transform: translate(0, 0);}
+    50%{transform: translate(500px, 250px);}
+}
+
+@keyframes move13{
+    0%, 100%{ transform: translate(0, 0);}
+    50%{transform: translate(500px, 250px);}
+}
+
+@keyframes move14{
+    0%, 100%{ transform: translate(0, 0);}
+    50%{transform: translate(500px, 250px);}
+}
+
+@keyframes move15{
+    0%, 100%{ transform: translate(0, 0);}
+    50%{transform: translate(500px, 250px);}
+}
+
+@keyframes move16{
+    0%, 100%{ transform: translate(0, 0);}
+    50%{transform: translate(500px, 250px);}
+}

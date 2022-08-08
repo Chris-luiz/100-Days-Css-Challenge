@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(68, 68, 68);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background{
+    width: 50vw;
+    height: 80vh;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.terrain{
+    position: absolute;
+    background-color: #fae98c;
+    width: 100vw;
+    height: 100vh;
+    transform: translateX(-120px);
+    top: 50%;
+
+    animation: terrainShade 4s cubic-bezier(0.4, 0, 0.49, 1) infinite;
+}
+
+
+.sky{
+    position: absolute;
+    background-color: #8ce0fa;
+    width: 100vw;
+    height: 80vh;
+    transform: translateX(-120px);
+    animation: skyShade 4s cubic-bezier(0.4, 0, 0.49, 1) infinite;
+}
+
+.sun{
+    position: absolute;
+    top: 5%;
+    width: 5vw;
+    height: 5vw;
+    background-color: rgb(255, 251, 0);
+    border-radius: 50%;
+    transform-origin: 50% 400%;
+    animation: movingSun 4s cubic-bezier(0.4, 0, 0.49, 1) infinite;
+}
+
+.primarid-left-side,
+.piramid{
+    position: absolute;
+    width: 20vw;
+    height: 30vh;
+    background-color: darkgrey; 
+}
+
+.piramid{
+    animation: leftSideShade 4s ease-in-out infinite;
+    clip-path: polygon(47% 0, 64% 100%, 100% 100%);
+}
+.primarid-left-side{
+    animation: rightSideShade 4s ease-in-out infinite;
+    clip-path: polygon(47% 0, 64% 100%, 0 100%);
+}
+
+.shadow{
+    position: absolute;
+    background-color: #414141;
+    width: 10vw;
+    height: 30vh;
+    transform: translateX(-6px);
+    top: 50%;
+
+    animation: shadow 4s cubic-bezier(0.4, 0, 0.49, 1) infinite;
+}
+
+
+@keyframes movingSun{
+    0% {
+		background: #E69900;
+		transform: rotate(-110deg);
+	}
+	30% {
+		background: #D7F026;
+		transform: rotate(-28deg);
+	}
+	70% {
+		background: #D7F026;
+	}
+	100% {
+		background: #F57209;
+		transform: rotate(110deg);
+	}
+}
+
+@keyframes terrainShade{
+    0%{background-color: #000;}
+    30%{background-color: #fae98c;}
+    100%{background-color: #000}
+}
+
+@keyframes skyShade{
+    0%{background-color: #000;}
+    30%{background-color: #8ce0fa;}
+    100%{background-color: #000}
+}
+
+@keyframes rightSideShade{
+    0%{background-color: #000;}
+    30%{background-color: white;}
+    80%{background-color: darkgrey;}
+    100%{background-color: #000}
+}
+
+@keyframes leftSideShade{
+    0%{background-color: #000;}
+    30%{background-color: darkgrey;}
+    70%{background-color: white;}
+    100%{background-color: #000}
+}
+
+@keyframes shadow {
+    0%{clip-path: polygon(90% 35%, 0 0, 100% 0);
+        background-color: #000;
+    }
+    30%{clip-path: polygon(88% 64%, 0 0, 100% 0);
+        background-color: rgba(156, 156, 156, 0.192);
+    }
+  
+    100%{clip-path: polygon(3% 17%, 0 0, 100% 0);
+        background-color: #000;
+    }
+}

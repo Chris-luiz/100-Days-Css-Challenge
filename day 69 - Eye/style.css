@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #292235;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eye{
+    margin: 100px;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(226, 226, 226);
+    transform: rotate(45deg);
+    border-radius: 90% 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: blink 1s infinite;
+}
+
+.eye-circle{
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: move-eye 5s infinite  linear;
+}
+
+.eye-pupil{
+    width: 35%;
+    height: 35%;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.top, .bottom{
+    position: absolute;
+    width: 500px;
+    height: 200px;
+    background-color: #292235;
+    z-index: 2;
+}
+
+.bottom{
+    margin-top: 40%;
+    animation: lid-bottom 10s infinite linear;
+}
+.top{
+    margin-bottom: 40%;
+    animation: lid-top 10s infinite linear;
+}
+
+@keyframes move-eye{
+    6%, 10%, 45%{
+        transform: translate(-25px, 85px);
+    }
+    50%, 80%{
+        transform: translate(65px, 0px);
+    }
+    81%{
+        transform: translate(0, 0px);
+    }
+}
+
+@keyframes lid-top{
+    0%, 5%{
+        margin-bottom: 40%;
+    }
+    6%{
+        margin-bottom: 17.2%;
+    }
+    7%, 10%, 38%{
+       margin-bottom: 40%;
+    }
+    40%{
+        margin-bottom: 17.2%;
+    }
+    41%, 65%, 70%, 80%{
+        margin-bottom: 40%;
+    }
+    81%{
+        margin-bottom: 17.2%;
+    }
+    82%, 100%{
+        margin-bottom: 40%;
+    }
+}
+
+@keyframes lid-bottom{
+   0%, 5%{
+        margin-top: 40%;
+    }
+    6%{
+        margin-top: 17.2%;
+    }
+    7%, 10%, 38%{
+       margin-top: 40%;
+    }
+    40%{
+        margin-top: 17.2%;
+    }
+    41%, 65%, 70%, 80%{
+        margin-top: 40%;
+    }
+    81%{
+        margin-top: 17.2%;
+    }
+    82%, 100%{
+        margin-top: 40%;
+    }
+}

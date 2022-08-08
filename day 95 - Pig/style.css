@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --pig-color: #f3788d;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(240, 194, 108);
+}
+
+.pig{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.pig-right-ear,
+.pig-left-ear{
+    width: 110px;
+    height: 110px;
+    border-radius: 10px;
+    border-radius: 25% 25% 25% 0;
+    position: absolute;
+    background-color: var(--pig-color);
+    margin-bottom: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pig-left-ear-hole,
+.pig-right-ear-hole{
+    width: 80px;
+    height: 80px;
+    border-radius: 25% 25% 25% 0;
+    position: absolute;
+    background-color: #f1b4be;
+}
+
+.pig-right-ear{
+    transform: rotate(12deg) skewY(-27deg);
+    margin-left: 60%;
+}
+
+.pig-left-ear{
+    transform: rotate(-70deg) skewY(-27deg) scaleX(-1);
+    margin-right: 60%;
+}
+
+.pig-head{
+    width: 300px;
+    height: 300px;
+    background-color: var(--pig-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.pig-left-eye,
+.pig-right-eye{
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    animation: blink 15s infinite;
+}
+
+.pig-left-pupil,
+.pig-right-pupil{
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+
+    animation: blink 15s infinite;
+}
+
+.pig-nose{
+    width: 90px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #f1b4be;
+    position: absolute;
+    margin-top: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.pig-nose-left,
+.pig-nose-right{
+    width: 25px;
+    height: 25px;
+    background-color: #af3c4f;
+    border-radius: 50%;
+}
+
+@keyframes blink{
+    3%, 23%, 25%, 65%, 67%, 89%, 91%, 100%{
+        transform: scaleY(1);
+    }
+    24%, 66%, 90% {
+		transform: scaleY(0);
+	}
+}

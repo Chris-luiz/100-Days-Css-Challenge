@@ -1,0 +1,50 @@
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+.container{
+      width: 100vw;
+      height: 100vh;
+      background-color: rgb(72, 40, 131);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+}
+
+.circle{
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      border-radius: 10px;
+}
+
+.circle:nth-of-type(1){animation: pendulum 0.60s ease-in-out infinite alternate}
+.circle:nth-of-type(2){animation: pendulum 0.62s ease-in-out infinite alternate}
+.circle:nth-of-type(3){animation: pendulum 0.64s ease-in-out infinite alternate}
+.circle:nth-of-type(4){animation: pendulum 0.66s ease-in-out infinite alternate}
+.circle:nth-of-type(5){animation: pendulum 0.68s ease-in-out infinite alternate}
+.circle:nth-of-type(6){animation: pendulum 0.70s ease-in-out infinite alternate}
+.circle:nth-of-type(7){animation: pendulum 0.72s ease-in-out infinite alternate}
+.circle:nth-of-type(8){animation: pendulum 0.74s ease-in-out infinite alternate}
+.circle:nth-of-type(9){animation: pendulum 0.76s ease-in-out infinite alternate}
+.circle:nth-of-type(10){animation: pendulum 0.78s ease-in-out infinite alternate}
+.circle:nth-of-type(11){animation: pendulum 0.80s ease-in-out infinite alternate}
+.circle:nth-of-type(12){animation: pendulum 0.82s ease-in-out infinite alternate}
+.circle:nth-of-type(13){animation: pendulum 0.84s ease-in-out infinite alternate}
+.circle:nth-of-type(14){animation: pendulum 0.86s ease-in-out infinite alternate}
+.circle:nth-of-type(15){animation: pendulum 0.88s ease-in-out infinite alternate}
+.circle:nth-of-type(16){animation: pendulum 0.90s ease-in-out infinite alternate}
+.circle:nth-of-type(17){animation: pendulum 0.92s ease-in-out infinite alternate}
+.circle:nth-of-type(18){animation: pendulum 0.94s ease-in-out infinite alternate}
+.circle:nth-of-type(19){animation: pendulum 0.96s ease-in-out infinite alternate}
+.circle:nth-of-type(20){animation: pendulum 0.98s ease-in-out infinite alternate}
+
+
+@keyframes pendulum {
+      from, to{transform: translate3d(-50px, 0 ,0);}
+      50%{transform: translate3d(50px, 0, 0);}
+}

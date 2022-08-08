@@ -1,0 +1,123 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,300);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    color: #786450
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg, #e2a762, #cc8150);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 
+    "profile posts"
+    "profile likes"
+    "profile followers";
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.432);
+    height: 60%;
+    width: 30vw;
+}
+
+.profile{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    grid-area: profile;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    justify-content: space;
+    text-align: center;
+}
+
+.profile-img{
+    width: 50%;
+    height: 50%;
+}
+
+.profile-name{
+    font-size: 150%;
+    font-weight: 600;
+}
+
+.profile-actions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.btn{
+    text-decoration: none;
+    border: 3px solid #786450;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 600;
+    padding: .5vw;
+    width: 15vw;
+}
+
+.btn:hover{
+    background-color: #786450;
+    color: #fff;
+}
+
+.label{
+    background-color:rgb(255, 217, 212);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    transition: .37s;
+}
+
+.label:hover{
+    background-color: rgb(233, 176, 168);
+    transition: .37s;
+    cursor: pointer;
+}
+
+.label-info{font-size: 150%;}
+.label-area{font-size: 50%;}
+
+.posts{grid-area: posts}
+.likes{grid-area: likes}
+.followers{grid-area: followers}
+
+@media (max-width: 740px){
+    .card{
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+    }
+
+    .label{width: 100%;}
+}
+
+@media (max-height: 500px){
+    .card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 5px;
+        height: auto;
+    }
+
+    .label{width: 100%;}
+}
+
+

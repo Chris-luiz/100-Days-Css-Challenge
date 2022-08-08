@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(11, 36, 68);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    width: 300px;
+    height: 250px;
+    background-color: #fff;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    border-radius: 6px;
+}
+
+.tabs{
+    display: flex;
+    justify-content: space-between;
+    background-color: #323d5c;
+}
+
+.ul{
+    display: flex;
+}
+
+li{
+    list-style: none;
+}
+
+.content{
+    background-color: #fff;
+}

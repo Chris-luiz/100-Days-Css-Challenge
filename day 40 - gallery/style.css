@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 200px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.img{
+    max-width: 100%;
+    width: 25vw;
+    transition: 1s;
+}
+
+.active{
+    transition: 1s;
+    transform: scale(1.5);
+}
