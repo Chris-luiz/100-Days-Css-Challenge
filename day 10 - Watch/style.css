@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #413d39;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.watch-shadow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d1d1d98;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+}
+
+.watch-border{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d1d1d;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.watch-interface{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d1d1d;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 5px dotted #fff;
+}
+
+.watch-hours{
+    text-align: center;
+    font-weight: 800;
+    font-size: 3.5rem;
+}
+
+.watch-steps{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+svg{
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    bottom: 0;
+    stroke-dasharray: 1000;
+    animation: spinner 5s linear infinite;
+}
+
+@keyframes spinner {
+	from {
+		stroke-dashoffset: 1000;
+		transform: rotate(-90deg);
+	}
+	50% {
+		stroke-dashoffset: 0;
+		transform: rotate(-90deg);
+	}
+	50.001% {
+		transform: rotate(-90deg);
+	}
+	to {
+		stroke-dashoffset: 1000;
+		transform: rotate(-90deg);
+	}
+}

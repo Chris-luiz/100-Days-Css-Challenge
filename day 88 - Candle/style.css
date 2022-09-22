@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(59, 63, 85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.candle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.candle-body{
+    width: 80px;
+    height: 160px;
+    border-radius: 3px;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.candle-fire{
+    width: 30px;
+    height: 30px;
+    background-color: goldenrod;
+    
+    box-shadow: 3px 3px 50px #d6c211,
+                -3px 3px 50px #d6c211,
+                3px -3px 50px #d6c211,
+                -3px -3px 50px #d6c211;
+
+    animation: candle 1s infinite alternate ease-in-out; 
+}
+
+.candle-stick{
+    width: 5px;
+    height: 10px;
+    background-color: rgb(165, 97, 42);
+}
+
+.candle-shadow{
+    width: 20px;
+    border-radius: 0 3px 3px 0;
+    height: 100%;
+    background-color: rgb(207, 226, 231);
+}
+
+.candle-base{
+    width: 160px;
+    height: 10px;
+    background-color: rgb(35, 38, 53);
+    border-radius: 10px;
+}
+
+@keyframes candle{
+    from{
+        transform: rotate(-60deg);
+        border-radius: 100% 0 100% 100%;
+    }
+
+    50%{
+        border-radius: 100% 80% 100% 100%;
+    }
+
+    to{
+        border-radius: 60% 0 60% 60%;
+        transform: rotate(-30deg);
+    }
+}
