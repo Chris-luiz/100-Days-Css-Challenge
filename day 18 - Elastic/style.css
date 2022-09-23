@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.bg-grey{background-color: #555555;}
+.bg-green{background-color: #11d389;}
+
+.circle{
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    height: 85%;
+    background-color: #11d389;
+    border-radius: 100%;
+
+    animation: slime 1s infinite alternate;
+}
+
+.circle:hover{
+    
+}
+
+@keyframes slime
+{
+    50%{
+        transform: rotateX(180deg);
+    }
+    51%{
+        transform: rotateX(-180deg);
+    }
+}
