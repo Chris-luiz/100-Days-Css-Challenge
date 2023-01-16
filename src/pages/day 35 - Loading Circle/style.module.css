@@ -1,0 +1,44 @@
+.day_35_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1BBE9E;
+}
+
+.bg {
+  fill: none;
+  stroke-width: 5px;
+  stroke: rgba(0, 0, 0, 0.363);
+}
+
+.loader {
+  stroke-width: 5px;
+  stroke: #fff;
+  fill: none;
+  stroke-dasharray: 288;
+  stroke-linecap: round;
+  transform-origin: 50% 50%;
+  animation:loading 3s linear infinite, spin 4s linear infinite;
+}
+
+@keyframes loading {
+  from {
+    stroke-dashoffset: 1152;
+  }
+
+  to {
+    stroke-dashoffset: 576;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(-90deg) translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: rotate(270deg) translate3d(0, 0, 0);
+  }
+}

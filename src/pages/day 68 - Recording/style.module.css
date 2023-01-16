@@ -1,0 +1,157 @@
+.day68_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #684595;
+  flex-direction: column;
+  position: relative;
+}
+
+#mic_checkbox {
+  display: none;
+}
+
+.day68_svg {
+  transition: .5s;
+  width: 230px;
+  height: 230px;
+  position: absolute;
+  pointer-events: none;
+}
+
+.day68_circle_svg {
+  fill: none;
+  cx: 115;
+  cy: 115;
+  r: 100;
+  stroke: #fff;
+  stroke-width: 6px;
+  transform-origin: 50% 50%;
+  stroke-linecap: round;
+}
+
+.mic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s;
+  position: absolute;
+}
+
+.mic_body {
+  height: 130px;
+  width: 50px;
+  border-radius: 100px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.mic_body_inner {
+  height: 30px;
+  width: 10px;
+  border-radius: 100px;
+  background-color: #684595;
+  margin-top: 50%;
+}
+
+.mic_sustentation {
+  height: 30px;
+  width: 10px;
+  background-color: #ffffff;
+}
+
+.mic_base {
+  height: 10px;
+  width: 50px;
+  border-radius: 100px;
+  background-color: #ffffff;
+}
+
+.mic_waiting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  gap: 20px;
+  transform: scale(0);
+  transition: .5s;
+}
+
+.mic_circle_waiting {
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  background-color: #fff;
+  transition: 1s;
+}
+
+/* INTERATIVIDADE */
+#mic_checkbox:checked ~ .day68_svg {
+  animation: circle 1s linear infinite;
+}
+
+#mic_checkbox:checked~.mic {
+  transition: 1s;
+  animation: mic_scaling .3s linear 1 forwards;
+}
+
+#mic_checkbox:checked~.mic_waiting {
+  z-index: 3;
+  transition: .3s;
+  transform: scale(1);
+}
+
+.mic_circle_waiting:nth-of-type(1) {
+  animation: waiting_points_moving .7s infinite ease-in-out alternate;
+}
+
+.mic_circle_waiting:nth-of-type(2) {
+  animation: waiting_points_moving .7s infinite ease-in-out alternate;
+  animation-delay: .2s;
+}
+
+.mic_circle_waiting:nth-of-type(3) {
+  animation: waiting_points_moving .7s infinite ease-in-out alternate;
+  animation-delay: .4s;
+}
+
+/* ANIMAÇÕES */
+
+@keyframes mic_scaling {
+  from {
+    transform: scale(1.2);
+  }
+
+  to {
+    transform: scale(0);
+  }
+}
+
+@keyframes waiting_points_moving {
+  from {
+    transform: translateY(15px);
+  }
+
+  to {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes circle {
+  0% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 296 296;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    stroke-dashoffset: (-296 * 2);
+    stroke-dasharray: 296 296;
+    transform: rotate(360deg);
+  }
+}

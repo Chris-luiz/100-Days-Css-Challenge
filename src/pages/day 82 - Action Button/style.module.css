@@ -1,0 +1,54 @@
+.day_82_container {
+  width: 100%;
+  height: 100%;
+  background-color: #BDCEDB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#action_checkbox {
+  display: none;
+}
+
+.day_82_label {
+  position: relative;
+}
+
+.day_82_button {
+  border: none;
+  border-radius: 100px;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  background-color: #fff;
+  padding: 20px 40px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.459);
+  text-transform: uppercase;
+  color: #34495E;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .7s;
+  position: absolute;
+}
+
+.send_button {
+  backface-visibility: hidden;
+}
+
+.done_button {
+  color: #fff;
+  background-color: #64C760;
+  border: 3px solid #fff;
+  transform: rotateX(180deg);
+}
+
+#action_checkbox:checked~.send_button {
+  transform: rotateX(180deg);
+}
+
+#action_checkbox:checked~.done_button {
+  transform: rotateX(0);
+}

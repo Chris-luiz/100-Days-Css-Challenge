@@ -1,0 +1,134 @@
+.day_33_container{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      background-color: #3299D8;
+}
+
+.sun{
+      width: 150px;
+      height: 150px;
+      background: radial-gradient(yellow, orange);
+      border-radius: 50%;
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      box-shadow: 3px 1px 100px orange,
+                  1px 1px 100px orange,
+                  -3px 1px 100px orange,
+                  1px 1px 100px orange;
+}
+
+.base{
+      box-shadow: 1px 1px 100px rgb(252, 248, 248);
+}
+
+.clound:nth-of-type(2){
+      position: absolute;
+      top: 20%;
+      left: 5%;
+}
+
+.clound:nth-of-type(2) .circle{
+      background-color: #fff;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      position: absolute;
+}
+
+.clound:nth-of-type(2) .circle:nth-child(2){
+      width: 150px;
+      height: 150px;
+      top: 50px;
+      left: -70px;
+}
+
+.clound:nth-of-type(2) .circle:nth-child(3){
+      width: 130px;
+      height: 130px;
+      top: 70px;
+      left: 150px;
+}
+
+.clound:nth-of-type(2) .base{
+      position: absolute;
+      width: 230px;
+      height: 30px;
+      background-color: #fff;
+      border-radius: 250px;
+      top: 170px;
+}
+
+.clound:nth-of-type(2){
+      animation: changeColor 12s ease-in infinite alternate;
+}
+
+@keyframes changeColor{
+      to{
+            transform: translate(250px);
+      }
+}
+
+.clound:nth-of-type(3){
+      position: absolute;
+      top: 55%;
+      left: 66%;
+}
+
+.clound:nth-of-type(3) .circle{
+      background-color: #fff;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      position: absolute;
+}
+
+
+.clound:nth-of-type(3) .circle:nth-child(2){
+      width: 80px;
+      height: 80px;
+      top: 120px;
+      left: -70px;
+}
+
+.clound:nth-of-type(3) .circle:nth-child(3){
+      width: 110px;
+      height: 110px;
+      top: 90px;
+      left: -20px;
+}
+
+.clound:nth-of-type(3) .circle:nth-child(4){
+      width: 130px;
+      height: 130px;
+      top: 70px;
+      left: 40px;
+}
+
+.clound:nth-of-type(3) .circle:nth-child(1){
+      width: 150px;
+      height: 150px;
+      top: 50px;
+      left: 120px;
+}
+
+.clound:nth-of-type(3) .base{
+      position: absolute;
+      width: 260px;
+      height: 40px;
+      background-color: #fff;
+      border-radius: 250px;
+      left: -40px;
+      top: 160px;
+}
+
+.clound:nth-of-type(3){
+      animation: changeColor 12s ease-in infinite alternate;
+}
+
+@keyframes changeColor{
+      to{
+            transform: translate(250px);
+      }
+}

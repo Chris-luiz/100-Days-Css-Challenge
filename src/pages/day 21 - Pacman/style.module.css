@@ -1,0 +1,114 @@
+.day_21_container {
+    width: 100%;
+    height: 100%;
+    background-color: #222121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.pacman {
+    position: absolute;
+}
+
+.pacman_eye {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: #222121;
+    position: absolute;
+    margin: 50px 0 0 200px;
+}
+
+.pacman_up,
+.pacman_down {
+    width: 300px;
+    height: 150px;
+    background-color: gold;
+    position: relative;
+}
+
+.pacman_up {
+    border-radius: 250px 250px 0 0;
+    animation: eat-up .4s ease-in-out infinite alternate;
+}
+
+.pacman_down {
+    border-radius: 0 0 250px 250px;
+    animation: eat-down .4s ease-in-out infinite alternate;
+}
+
+.ball {
+    width: 25px;
+    height: 25px;
+    background-color: gold;
+    margin-left: 10px;
+    border-radius: 25px;
+
+    animation: moving-ball 1s linear infinite;
+}
+
+.stroke {
+    position: absolute;
+    width: 160%;
+    height: 3px;
+    background-color: rgb(213, 1, 255);
+    box-shadow: 0px 5px 25px rgb(166, 0, 199),
+        0px -5px 25px rgb(166, 0, 199),
+        0px 5px 25px rgb(166, 0, 199),
+        0px -5px 25px rgb(166, 0, 199);
+
+    animation: moving-stroke 2s linear infinite alternate;
+}
+
+.stroke:nth-of-type(1) {
+    margin-top: 700px;
+}
+
+.stroke:nth-of-type(2) {
+    margin-top: 650px;
+}
+
+.stroke:nth-of-type(3) {
+    margin-top: -700px;
+}
+
+.stroke:nth-of-type(4) {
+    margin-top: -650px;
+}
+
+@keyframes eat-up {
+    to {
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes eat-down {
+    to {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes moving-ball {
+    from {
+        transform: translate(400px);
+    }
+
+    to {
+        transform: translate(300px);
+    }
+}
+
+@keyframes moving-stroke {
+    to {
+        transform: translate(200px);
+
+        box-shadow: 0px 5px 8px rgb(166, 0, 199),
+            0px -5px 8px rgb(166, 0, 199),
+            0px 5px 8px rgb(166, 0, 199),
+            0px -5px 8px rgb(166, 0, 199);
+
+    }
+}

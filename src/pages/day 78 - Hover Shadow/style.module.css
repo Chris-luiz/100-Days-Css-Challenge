@@ -1,0 +1,34 @@
+.day_78_container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3498db;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.button_hover{
+  width: 300px;
+  border: none;
+  height: 100px;
+  background-color: #fff;
+  transition: .5s;
+}
+
+.button_hover:hover{
+  transition: .5s;
+  transform: scale(1.1);
+}
+
+.button_hover:nth-of-type(1):hover{
+  box-shadow: 1px 2px 5px #000000;
+}
+.button_hover:nth-of-type(2):hover{
+  box-shadow: 1px 6px 6px #00000091;
+}
+.button_hover:nth-of-type(3):hover{
+  box-shadow: 14px 14px 15px #0000005e;
+}
+
