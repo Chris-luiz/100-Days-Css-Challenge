@@ -1,0 +1,11 @@
+import { SideMenu, ChallengeViwer } from '../../components';
+import styles from './style.module.css';
+
+export const BaseLayout = () => {
+  return (
+    <div className={styles.container_App}>
+      <SideMenu />
+      <ChallengeViwer />
+    </div>
+  )
+}

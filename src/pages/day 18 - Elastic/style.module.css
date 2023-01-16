@@ -1,0 +1,40 @@
+.box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.bg_grey {
+    background-color: #555555;
+}
+
+.bg_green {
+    background-color: #11d389;
+}
+
+.circle {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    height: 85%;
+    background-color: #11d389;
+    border-radius: 100%;
+
+    animation: slime 3s infinite alternate;
+}
+
+
+@keyframes slime {
+    50% {
+        transform: rotateX(180deg);
+    }
+
+    51% {
+        transform: rotateX(-180deg);
+    }
+}

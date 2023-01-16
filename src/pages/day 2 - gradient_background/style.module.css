@@ -1,0 +1,35 @@
+.day_2_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+      color: #fff;
+      background: linear-gradient(45deg, rgb(156, 14, 9), rgb(19, 9, 156));
+      background-size: 300% 300%;
+      animation: gradient alternate 6s infinite ease-in-out;
+}
+
+.day_2_container div {
+      border: 2px solid white;
+      padding: 5vh;
+      border-radius: 100px;
+      width: auto;
+}
+
+.day_2_container h1 {
+      font-size: 3.5vw;
+}
+
+@keyframes gradient {
+      from {
+            background-position: 0 50%;
+      }
+
+      50% {
+            background-position: 100% 50%
+      }
+
+      to {
+            background-position: 50% 0%;
+      }
+}

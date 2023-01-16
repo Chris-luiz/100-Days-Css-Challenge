@@ -1,0 +1,154 @@
+#day_1_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      background-color: #cdfffd;
+}
+
+#pokeball {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+
+      animation-name: roll_pokeball;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      animation-direction: alternate;
+}
+
+#pokeball_shadow {
+      z-index: -1;
+      position: absolute;
+      border-radius: 500%;
+      width: 30vw;
+      height: 10vh;
+      background-color: rgba(0, 0, 0, 0.308);
+
+      transform: translate(15vw, 20vh) skew(-80deg);
+
+      animation-name: roll_shadow;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      animation-direction: alternate;
+}
+
+#pokeball_up,
+#pokeball_down {
+      width: 50vh;
+      height: 25vh;
+      border: 5px solid black;
+      border-radius: 500px 500px 0 0;
+}
+
+#pokeball_up {
+      background-color: #ff0000;
+      box-shadow: inset -10px 14px 1px rgb(255, 63, 63);
+}
+
+#pokeball_down {
+      background-color: #f8f8f8;
+      transform: rotate(180deg);
+      box-shadow: inset -10px 14px 1px rgb(207, 207, 207);
+}
+
+#pokeball_blank_up,
+#pokeball_blank_down {
+      position: absolute;
+      background-color: #cdfffd;
+      width: 15vh;
+      height: 15vh;
+      border-radius: 100%;
+}
+
+#pokeball_blank_up {
+      border-top: 5px solid black;
+}
+
+#pokeball_blank_down {
+      border-bottom: 5px solid black;
+}
+
+#pokeball_visor {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      width: 15vh;
+      height: 15vh;
+      border-radius: 100%;
+      border: 5px solid black;
+      box-shadow: inset -4px 2px 1px rgb(194, 194, 194);
+
+      display: grid;
+      justify-content: center;
+      align-items: center;
+}
+
+#pokeball_visor:hover {
+      background-color: rgb(240, 184, 2);
+      box-shadow: 15px 0px 45px rgb(240, 184, 2),
+            0px 15px 45px rgb(240, 184, 2),
+            -15px 0px 45px rgb(240, 184, 2),
+            0px -15px 45px rgb(240, 184, 2);
+}
+
+#pokeball_visor_line {
+      width: 8vh;
+      height: 8vh;
+      border-radius: 100%;
+      border: .3vw solid black;
+}
+
+/**********  ANIMAÇÕES  **********/
+
+.open_up {
+      animation-name: open_pokeball_up;
+      animation-duration: 0.5s;
+      animation-iteration-count: 2;
+      animation-direction: alternate;
+      animation-timing-function: ease-in-out;
+}
+
+.open_down {
+      animation-name: open_pokeball_down;
+      animation-duration: 0.5s;
+      animation-iteration-count: 2;
+      animation-direction: alternate;
+      animation-timing-function: ease-in-out;
+}
+
+@keyframes open_pokeball_up {
+      to {
+            transform: translateY(-10vh);
+      }
+}
+
+@keyframes open_pokeball_down {
+      to {
+            transform: translateY(10vh) rotate(180deg);
+      }
+}
+
+@keyframes roll_pokeball {
+      from {
+            transform: translate(-15px) rotate(-15deg);
+      }
+
+      to {
+            transform: translate(15px) rotate(15deg);
+      }
+}
+
+@keyframes roll_shadow {
+      from {
+            transform: translate(5vw, 20vh);
+      }
+
+      to {
+            transform: translate(10vw, 20vh);
+      }
+}

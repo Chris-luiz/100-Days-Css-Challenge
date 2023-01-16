@@ -1,0 +1,13 @@
+.container_App {
+  padding: 5% 10%;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 2em;
+}
+
+@media (max-width: 1000px) {
+  .container_App {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
