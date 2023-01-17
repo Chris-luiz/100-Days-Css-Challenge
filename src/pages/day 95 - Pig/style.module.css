@@ -1,13 +1,10 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    --pig-color: #f3788d;
+:root{
+     --pig-color: #f3788d;
 }
 
-.container{
-    width: 100vw;
-    height: 100vh;
+.day_95_container{
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,8 +18,8 @@
     position: relative;
 }
 
-.pig-right-ear,
-.pig-left-ear{
+.pig_right_ear,
+.pig_left_ear{
     width: 110px;
     height: 110px;
     border-radius: 10px;
@@ -35,8 +32,8 @@
     align-items: center;
 }
 
-.pig-left-ear-hole,
-.pig-right-ear-hole{
+.pig_left_ear_hole,
+.pig_right_ear_hole{
     width: 80px;
     height: 80px;
     border-radius: 25% 25% 25% 0;
@@ -44,17 +41,17 @@
     background-color: #f1b4be;
 }
 
-.pig-right-ear{
+.pig_right_ear{
     transform: rotate(12deg) skewY(-27deg);
     margin-left: 60%;
 }
 
-.pig-left-ear{
+.pig_left_ear{
     transform: rotate(-70deg) skewY(-27deg) scaleX(-1);
     margin-right: 60%;
 }
 
-.pig-head{
+.pig_head{
     width: 300px;
     height: 300px;
     background-color: var(--pig-color);
@@ -65,8 +62,8 @@
     position: relative;
 }
 
-.pig-left-eye,
-.pig-right-eye{
+.pig_left_eye,
+.pig_right_eye{
     width: 45px;
     height: 45px;
     background-color: white;
@@ -81,8 +78,8 @@
     animation: blink 15s infinite;
 }
 
-.pig-left-pupil,
-.pig-right-pupil{
+.pig_left_pupil,
+.pig_right_pupil{
     width: 10px;
     height: 10px;
     background-color: #000;
@@ -91,7 +88,7 @@
     animation: blink 15s infinite;
 }
 
-.pig-nose{
+.pig_nose{
     width: 90px;
     height: 80px;
     border-radius: 50%;
@@ -104,8 +101,8 @@
     gap: 10px;
 }
 
-.pig-nose-left,
-.pig-nose-right{
+.pig_nose_left,
+.pig_nose_right{
     width: 25px;
     height: 25px;
     background-color: #af3c4f;

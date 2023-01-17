@@ -1,0 +1,97 @@
+
+.day_55_container{
+    width: 100%;
+    height: 100%;
+    background-color: #2B4147;
+}
+
+.flex_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.thermostat{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background-color: #F2F2F2;
+    padding: 1em;
+    overflow: hidden;
+    position: relative;
+}
+
+.thermostat_border{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background: linear-gradient(90deg, #672b95 0%, #ce2e5f 100%);
+}
+
+.thermostat_clean_down{
+    width: 150px;
+    position: absolute;
+    top: 70%;
+    height: 150px;
+    background-color: #f2f2f2;
+    transform: rotate(45deg);
+}
+
+.thermostat_content{
+    width: 80%;
+    height: 80%;
+    border-radius: 100%;
+    background-color: #fff;
+    z-index: 2;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.514);
+    font-size: 1.1em;
+    color: #8d8d8d;
+    position: relative;
+}
+
+.degree{
+    font-size: 6em;
+}
+
+.thermostat_content_degree{
+    color: #770a8d;
+    transition: .5s;
+}
+
+.thermostat_content_degree:nth-of-type(1){
+    transform: scale(1) translate(50%);
+}
+
+.thermostat:hover .thermostat_content_degree:nth-of-type(1){
+    transform: scale(0) translate(-50px);
+    opacity: 0;
+}
+
+.thermostat_content_degree:nth-of-type(2){
+    transform: scale(0) translate(50px);
+    opacity: 0;
+}
+
+.thermostat:hover .thermostat_content_degree:nth-of-type(2){
+    transform: scale(1) translate(-50%);
+    opacity: 1;
+}
+
+.meter{
+    width: 1px;
+    height: 20px;
+    top: 0;
+    position: absolute;
+    background-color: #2B4147;
+    transition: .5s;
+    transform-origin: 0 120px;
+    transform: rotate(-45deg);
+}
+
+.thermostat:hover .meter{
+    transform: rotate(-10deg);
+}

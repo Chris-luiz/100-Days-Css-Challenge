@@ -1,0 +1,103 @@
+.day_94_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #E0F0E5;
+  width: 100%;
+  height: 100%;
+}
+
+.tree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tree_body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tree_back_paper_left,
+.tree_back_paper_right {
+  background-color: #E0F0E5;
+  width: 300px;
+  height: 800px;
+}
+
+.tree_back_paper_left {
+  transform: rotate(20deg);
+  left: -115px;
+  top: -250px;
+  animation: tree_show_woods_left 1 2s linear;
+}
+
+.tree_back_paper_right {
+  transform: rotate(-20deg);
+  left: 320px;
+  top: -250px;
+  animation: tree_show_woods_right 1 2s linear;
+}
+
+.left_wood,
+.right_wood {
+  width: 250px;
+  height: 250px;
+}
+
+.left_wood {
+  background-color: #a5280f;
+}
+
+.right_wood {
+  background-color: #E84624;
+}
+
+.tree_main_stick {
+  width: 5px;
+  height: 350px;
+  background-color: #E8C87E;
+  border-radius: 10px;
+  animation: tree_base_main_stick 1 1s linear;
+  left: 50%;
+  z-index: 2;
+}
+
+.tree_base {
+  transition: 1s;
+  width: 150px;
+  height: 5px;
+  background-color: #B9D6C2;
+  border-radius: 10px;
+  animation: tree_base_grow 1 1s linear;
+}
+
+@keyframes tree_base_main_stick {
+  from {
+    height: 0;
+  }
+}
+
+@keyframes tree_show_woods_left {
+  from,
+  50% {
+    transform: translate(70px);
+  }
+}
+
+@keyframes tree_show_woods_right {
+  from,
+  50% {
+    transform: translate(-70px);
+  }
+}
+
+
+@keyframes tree_base_grow {
+  from {
+    width: 0;
+  }
+}
