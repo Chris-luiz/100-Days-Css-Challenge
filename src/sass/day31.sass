@@ -1,0 +1,29 @@
+@use 'utils' 
+
+$seconds: 0.58
+$duration: 60
+$numberOfDots: 20
+$oscillations: 40
+
+.day_31_container
+  @include utils.default_container(#482883)
+  @include utils.flex_column
+  gap: 10px
+
+.circle
+  width: 10px
+  height: 10px
+  background-color: white
+  border-radius: 10px
+
+@for $i from 1 through $numberOfDots
+  $time: $duration / ($oscillations + $numberOfDots - $i)
+  .circle:nth-of-type(#{$i})
+    animation: pendulum ($time * 1000) + ms ease-in-out infinite
+
+@keyframes pendulum
+
+  from, to
+    transform: translate3d(500px, 0, 0)
+  50%
+    transform: translate3d(400px, 0, 0)

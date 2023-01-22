@@ -1,77 +1,68 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.container{
-    width: 100vw;
-    height: 100vh;
+.day_86_container {
+    width: 100%;
+    height: 100%;
     background-color: rgb(53, 67, 82);
-
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
 }
 
-.line{
+.line {
     width: 250px;
     border: 3px solid #fff;
     background-color: #fff;
     border-radius: 100px;
-    position: absolute;    
-    top: 80px;
+    position: absolute;
+    top: 250px;
 }
 
-.ball{
+.ball {
     width: 50px;
     height: 50px;
     background-color: #fff;
-    border-radius: 50%;;
+    border-radius: 50%;
 }
 
-.ball::before{
+.ball::before {
     content: '';
     width: 3px;
     height: 150px;
     background-color: #fff;
     display: block;
-    position: absolute;
-    top: 80px;
+    top: -100px;
+    position: relative;
     margin-left: 25px;
 }
 
-.ball:nth-of-type(6)::before,
-.ball:nth-of-type(2)::before
-{
-    transform: translate(0, -190px);
-}
-
-.ball:nth-of-type(2){
+.ball:nth-of-type(2) {
     transform-origin: 50% -100px;
     animation: push-right 0.8s ease-out .8s alternate infinite;
 }
 
-@keyframes push-right{
-    0%, 50% {
-		transform: rotate(0);
-	}
-    100%{
-        transform: rotate(45deg) ;
+@keyframes push-right {
+    0%,
+    50% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(45deg);
     }
 }
 
-.ball:nth-of-type(6){
+.ball:nth-of-type(6) {
     transform-origin: 50% -100px;
     animation: push-left 0.8s ease-out alternate infinite;
 }
 
-@keyframes push-left{
-    0%, 50% {
-		transform: rotate(0);
-	}
-    100%{
-        transform: rotate(-45deg) ;
+@keyframes push-left {
+    0%,
+    50% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(-45deg);
     }
 }
