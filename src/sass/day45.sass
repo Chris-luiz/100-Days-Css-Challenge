@@ -1,0 +1,42 @@
+@use 'utils'
+
+.day_45_container
+  @include utils.flex_center
+  @include utils.default_container(#5CA4EA)
+  color: #fff
+  text-transform: uppercase
+
+  .hover_button
+    @include utils.flex_center
+    cursor: pointer
+
+    .bg-line
+      fill: #5CA4EA
+      stroke: #91C9FF
+      transition: all .8s ease-in-out
+
+    .hl-line
+      stroke: #fff
+      stroke-dasharray: 40 480
+      stroke-dashoffset: 40
+      transition: all .8s ease-in-out
+
+    &:hover
+      .bg-line
+        fill: #4F95DA
+
+      .hl-line
+        stroke-dashoffset: -480
+
+  span
+    z-index: 2
+
+  .button_border
+    fill: none
+    stroke: #fff
+    stroke-width: 1
+    position: absolute
+    transition: .4s
+
+    &:hover
+      background-color: #1766b4

@@ -1,13 +1,14 @@
 import { Routes, Route } from "react-router-dom"
 
 import { BaseLayout } from '../shared/layout/BaseLayout/BaseLayout';
-import { Day1, Day3, Day4, Day5, Day6, Day7, Day9, Day10, 
-Day15, Day18, Day21, Day31, Day32, Day33, Day34, Day35, Day36, Day40, Day41, Day55, Day62, Day61, Day64, Day65, Day66, Day68, Day69, Day70, 
-Day72, Day73, Day74, Day76, Day78, Day80, Day82, Day86, Day88, Day92, Day94, Day95, Day96, Day99, InDevelopment } from '../pages';
+import {
+  Day1, Day3, Day4, Day5, Day6, Day7, Day9, Day10,
+  Day15, Day18, Day21, Day31, Day32, Day33, Day34, Day35, Day36, Day40, Day41, Day43, Day44, Day45, Day55, Day62, Day61, Day64, Day65, Day66, Day68, Day69, Day70,
+  Day72, Day73, Day74, Day76, Day78, Day80, Day82, Day86, Day88, Day92, Day94, Day95, Day96, Day99, InDevelopment
+} from '../pages';
 
 export const Router = () => {
   return (
-
     <Routes>
       <Route path={'dia1'} element={<Day1 />} />
       <Route path={'dia3'} element={<Day3 />} />
@@ -28,6 +29,9 @@ export const Router = () => {
       <Route path={'dia36'} element={<Day36 />} />
       <Route path={'dia40'} element={<Day40 />} />
       <Route path={'dia41'} element={<Day41 />} />
+      <Route path={'dia43'} element={<Day43 />} />
+      <Route path={'dia44'} element={<Day44 />} />
+      <Route path={'dia45'} element={<Day45 />} />
       <Route path={'dia55'} element={<Day55 />} />
       <Route path={'dia61'} element={<Day61 />} />
       <Route path={'dia62'} element={<Day62 />} />

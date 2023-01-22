@@ -1,0 +1,36 @@
+@use 'utils'
+
+$width: 10
+$height: 10
+$delay: 6
+
+.day_44_container
+  @include utils.default_container(#4e4e4e)
+  @include utils.flex_center
+
+.pyramid_container
+  @include utils.flex_center
+  position: absolute
+
+  &:hover .twisted_pyramid
+    animation-play-state: paused
+
+@for $i from 1 through 20
+
+  $calc: $width + ($i * 20)
+  $delay: $i / 30
+
+  .twisted_pyramid:nth-of-type(#{$i})
+    position: absolute
+    width: #{$calc}px
+    height: #{$calc}px
+    border: 2px solid #fff
+    animation: twist_pyramid 6s infinite linear
+    animation-delay: #{$delay}s
+    animation-timing-function: ease-in-out
+
+  @keyframes twist_pyramid
+    0%, 100%
+      transform: rotate(0deg)
+    50%
+      transform: rotate(360deg)

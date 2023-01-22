@@ -1,0 +1,49 @@
+.day_43_container {
+  width: 100%;
+  height: 100%;
+  background-color: #404556;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.back_shadow {
+  position: absolute;
+  border-radius: 200px;
+  transition: 0.5s;
+  background: #fafaaf;
+  box-shadow: 2px 2px 60px 40px #fafaaf;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border: none;
+}
+.back_shadow:hover {
+  background: none;
+  box-shadow: 0px 0px 30px 20px rgba(250, 250, 175, 0);
+}
+
+#bulb {
+  position: absolute;
+  z-index: 2;
+  fill: #ffff00;
+  cursor: pointer;
+  transition: 0.5s;
+}
+#bulb:hover {
+  fill: #8C8F99;
+  background: transparent;
+  box-shadow: 0 0 0 0 #8C8F99;
+}
+#bulb:hover ~ .back_shadow {
+  box-shadow: none;
+}
+
+#base {
+  margin-top: 140px;
+  fill: #8C8F99;
+}
+
+/*# sourceMappingURL=style.module.css.map */
