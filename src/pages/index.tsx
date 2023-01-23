@@ -1,4 +1,5 @@
 export * from './day 1 - pokeball/';
+export * from './day 2 - Menu Icon/';
 export * from './day 3 - piramid_sun/';
 export * from './day 4 - loading/';
 export * from './day 5 - Statistics/';

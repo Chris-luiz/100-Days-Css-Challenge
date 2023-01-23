@@ -1,6 +1,6 @@
 export const disabledDays = [
    /* dia1: */ false,
-   /* dia2: */ true,
+   /* dia2: */ false,
    /* dia3: */ false,
    /* dia4: */ false,
    /* dia5: */ false,

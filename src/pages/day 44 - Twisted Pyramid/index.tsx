@@ -23,7 +23,6 @@ export const Day44 = () => {
         <div className={style.twisted_pyramid}></div>
         <div className={style.twisted_pyramid}></div>
         <div className={style.twisted_pyramid}></div>
-        <div className={style.twisted_pyramid}></div>
       </div>
     </div>
   );
